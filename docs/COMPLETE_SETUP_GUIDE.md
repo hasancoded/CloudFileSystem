@@ -8,7 +8,7 @@
 
 ---
 
-## üéØ PART 1: PREREQUISITES INSTALLATION
+##  PART 1: PREREQUISITES INSTALLATION
 
 ### Step 1.1: Install Java JDK 17
 
@@ -26,8 +26,8 @@
 
 1. Run the downloaded `.msi` file
 2. Click "Next" through the wizard
-3. ‚úÖ **IMPORTANT:** Check "Set JAVA_HOME variable"
-4. ‚úÖ **IMPORTANT:** Check "Add to PATH"
+3.  **IMPORTANT:** Check "Set JAVA_HOME variable"
+4.  **IMPORTANT:** Check "Add to PATH"
 5. Complete installation
 6. Click "Finish"
 
@@ -118,7 +118,7 @@ Expected: Version info and empty container list
 
 ---
 
-## üê≥ PART 2: DOCKER CONTAINER SETUP
+##  PART 2: DOCKER CONTAINER SETUP
 
 ### Step 2.1: Create MySQL Container
 
@@ -269,7 +269,7 @@ Should show all 8 tables.
 
 ---
 
-## üìÅ PART 3: PROJECT SETUP
+##  PART 3: PROJECT SETUP
 
 ### Step 3.1: Get Project Files
 
@@ -312,7 +312,7 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
 **Using NetBeans:**
 
 1. **Open NetBeans**
-2. **File ‚Üí Open Project**
+2. **File Üí Open Project**
 3. Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 4. Click "Open Project"
 
@@ -321,7 +321,7 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
    For each NEW file:
 
    - Right-click on appropriate package
-   - New ‚Üí Java Class
+   - New Üí Java Class
    - Enter class name (without .java)
    - Copy-paste code from provided artifacts
 
@@ -346,11 +346,11 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
 
 6. **Add Test Files:**
 
-   **‚ö†Ô∏è CRITICAL: Test files MUST go in `src/test/java`**
+   **†Ô∏è CRITICAL: Test files MUST go in `src/test/java`**
 
    - Right-click "Test Packages"
-   - New ‚Üí Java Package ‚Üí `com.soft40051.app.auth`
-   - Right-click new package ‚Üí New ‚Üí Java Class ‚Üí `AuthServiceTest`
+   - New Üí Java Package Üí `com.soft40051.app.auth`
+   - Right-click new package Üí New Üí Java Class Üí `AuthServiceTest`
    - Copy-paste test code
 
    Repeat for:
@@ -383,7 +383,7 @@ Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 
 1. **Jenkinsfile** (no extension)
 
-   - Right-click ‚Üí New ‚Üí Text Document
+   - Right-click Üí New Üí Text Document
    - Rename to "Jenkinsfile" (remove .txt)
    - Open with Notepad
    - Copy-paste Jenkinsfile content
@@ -397,13 +397,13 @@ Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 
 ---
 
-## üî® PART 4: BUILD AND RUN
+##  PART 4: BUILD AND RUN
 
 ### Step 4.1: Clean Build
 
 **In NetBeans:**
 
-1. Right-click project ‚Üí "Clean and Build"
+1. Right-click project Üí "Clean and Build"
 
 **OR in Command Prompt:**
 
@@ -468,7 +468,7 @@ mvn javafx:run
 [2/8] Starting database sync service...
 ...
 ========================================
-  ‚úì CloudFileSystem Ready
+   CloudFileSystem Ready
 ========================================
 ```
 
@@ -491,7 +491,7 @@ mvn javafx:run
 
 ---
 
-## üöÄ PART 5: OPTIONAL - CI/CD SETUP
+##  PART 5: OPTIONAL - CI/CD SETUP
 
 ### Step 5.1: Start Jenkins (Optional)
 
@@ -521,7 +521,7 @@ See `GITEA_SETUP.md` for full setup.
 
 ---
 
-## ‚úÖ PART 6: VERIFICATION CHECKLIST
+##  PART 6: VERIFICATION CHECKLIST
 
 ### 6.1: Docker Containers
 
@@ -531,10 +531,10 @@ docker ps
 
 Should show:
 
-- ‚úÖ soft40051-mysql (running)
-- ‚úÖ soft40051-file-server (running)
-- ‚úÖ soft40051-jenkins (optional)
-- ‚úÖ soft40051-gitea (optional)
+-  soft40051-mysql (running)
+-  soft40051-file-server (running)
+-  soft40051-jenkins (optional)
+-  soft40051-gitea (optional)
 
 ---
 
@@ -542,11 +542,11 @@ Should show:
 
 Test each feature:
 
-- ‚úÖ Login/Logout
-- ‚úÖ File Create/Read/Update/Delete
-- ‚úÖ File Sharing
-- ‚úÖ System Status Dashboard
-- ‚úÖ User Management (admin only)
+-  Login/Logout
+-  File Create/Read/Update/Delete
+-  File Sharing
+-  System Status Dashboard
+-  User Management (admin only)
 
 ---
 
@@ -556,11 +556,11 @@ Test each feature:
 mvn test
 ```
 
-- ‚úÖ All tests pass
+-  All tests pass
 
 ---
 
-## üêõ TROUBLESHOOTING
+##  TROUBLESHOOTING
 
 ### Problem: "package org.junit.jupiter.api does not exist"
 
@@ -651,7 +651,7 @@ mvn test
 
 ---
 
-## üìû SUPPORT & NEXT STEPS
+## û SUPPORT & NEXT STEPS
 
 ### If Build Still Fails:
 
@@ -679,15 +679,15 @@ mvn test
 
 ### After Successful Setup:
 
-1. ‚úÖ Take snapshot of working environment
-2. ‚úÖ Commit to Git (if using Gitea)
-3. ‚úÖ Test all features thoroughly
-4. ‚úÖ Review IMPLEMENTATION_REPORT.md for feature details
-5. ‚úÖ Practice demo presentation
+1.  Take snapshot of working environment
+2.  Commit to Git (if using Gitea)
+3.  Test all features thoroughly
+4.  Review IMPLEMENTATION_REPORT.md for feature details
+5.  Practice demo presentation
 
 ---
 
-## üìä FINAL VERIFICATION
+##  FINAL VERIFICATION
 
 Run this complete test:
 
@@ -711,7 +711,7 @@ docker ps
 
 ---
 
-## üéì ACADEMIC USE
+##  ACADEMIC USE
 
 This project is for **SOFT40051 - Advanced Software Engineering** coursework.
 
@@ -725,7 +725,7 @@ This project is for **SOFT40051 - Advanced Software Engineering** coursework.
 
 ---
 
-## üìù SUMMARY OF COMMANDS
+##  SUMMARY OF COMMANDS
 
 ```cmd
 # Setup

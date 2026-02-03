@@ -84,8 +84,8 @@ python generate_data.py
 
 ```
 [Data Generator] Generating 6 months of synthetic data...
-[Data Generator] ‚úì Generated 4320 data points
-[Data Generator] ‚úì Saved to training_data.csv
+[Data Generator] ì Generated 4320 data points
+[Data Generator] ì Saved to training_data.csv
 
 === Data Statistics ===
 Date range: 2025-07-07 to 2026-01-07
@@ -119,26 +119,26 @@ python train_model.py
 
 ```
 [Model Training] Loading data from training_data.csv...
-[Model Training] ‚úì Loaded 4320 data points
+[Model Training] ì Loaded 4320 data points
 [Model Training] Training Random Forest...
-[Model Training] ‚úì Model training complete
+[Model Training] ì Model training complete
 
 MODEL PERFORMANCE METRICS
 RMSE: 45.23 req/hr
 MAE: 38.15 req/hr
 R¬≤ Score: 0.8912
-‚úì RMSE target met (< 100 req/hr)
-‚úì R¬≤ target met (> 0.85)
+ì RMSE target met (< 100 req/hr)
+ì R¬≤ target met (> 0.85)
 
 FEATURE IMPORTANCE
-avg_load_last_7d         0.3245 ‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà
-hour_of_day              0.2156 ‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà
-load_1h_ago              0.1987 ‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà
-is_business_hours        0.1234 ‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà
-day_of_week              0.0987 ‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà‚ñà
-month                    0.0543 ‚ñà‚ñà‚ñà‚ñà‚ñà
-is_weekend               0.0432 ‚ñà‚ñà‚ñà‚ñà
-load_24h_ago             0.0416 ‚ñà‚ñà‚ñà‚ñà
+avg_load_last_7d         0.3245 ñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñà
+hour_of_day              0.2156 ñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñà
+load_1h_ago              0.1987 ñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñàñà
+is_business_hours        0.1234 ñàñàñàñàñàñàñàñàñàñàñàñà
+day_of_week              0.0987 ñàñàñàñàñàñàñàñàñà
+month                    0.0543 ñàñàñàñàñà
+is_weekend               0.0432 ñàñàñàñà
+load_24h_ago             0.0416 ñàñàñàñà
 ```
 
 **What this does:**
@@ -150,8 +150,8 @@ load_24h_ago             0.0416 ‚ñà‚ñà‚ñà‚ñà
 
 **Target Metrics:**
 
-- ‚úÖ RMSE < 100 req/hr
-- ‚úÖ R¬≤ > 0.85
+-  RMSE < 100 req/hr
+-  R¬≤ > 0.85
 
 ---
 
@@ -165,9 +165,9 @@ python app.py
 
 ```
 [ML API] Loading model artifacts...
-[ML API] ‚úì Model loaded successfully
-[ML API] ‚úì Scaler loaded successfully
-[ML API] ‚úì Model metadata loaded (RMSE: 45.23)
+[ML API] ì Model loaded successfully
+[ML API] ì Scaler loaded successfully
+[ML API] ì Model metadata loaded (RMSE: 45.23)
 
 [ML API] Starting Flask server on http://localhost:5000
 [ML API] Endpoints:
@@ -220,22 +220,22 @@ mvn javafx:run
 **Expected console output:**
 
 ```
-[ScalingService] ‚úì ML prediction service connected
+[ScalingService] ì ML prediction service connected
 [ScalingService] Mode: PROACTIVE (ML-based)
 [ScalingService] Initialized with 1 container(s)
 [ScalingService] Auto-scaling started
 
 [ML-Predictor] Current: 450 req/hr | Predicted (30min): 820 req/hr | Confidence: [780, 860]
 [ScalingService] Load: 45.00% (current), Predicted: 820 req/hr, Containers: 1
-[ML-Scaling] ‚ö° PROACTIVE SCALE UP: Predicted load (820) > 75% capacity (270)
-[ScalingService] ‚¨Ü SCALING UP (ML-PROACTIVE): Adding container soft40051-file-server-2
-[ScalingService] ‚úì Scale up completed (ML-PROACTIVE). Total containers: 2
+[ML-Scaling] ° PROACTIVE SCALE UP: Predicted load (820) > 75% capacity (270)
+[ScalingService] ¨Ü SCALING UP (ML-PROACTIVE): Adding container soft40051-file-server-2
+[ScalingService] ì Scale up completed (ML-PROACTIVE). Total containers: 2
 ```
 
 **If ML service is unavailable:**
 
 ```
-[ScalingService] ‚ö† ML service unavailable - using REACTIVE mode
+[ScalingService] † ML service unavailable - using REACTIVE mode
 [ScalingService] REACTIVE Mode - Load: 45.00%, Containers: 1
 ```
 
@@ -243,7 +243,7 @@ mvn javafx:run
 
 ## Verification Checklist
 
-### ‚úÖ Python ML Service
+###  Python ML Service
 
 - [ ] Virtual environment activated
 - [ ] Dependencies installed (`pip list` shows flask, scikit-learn, etc.)
@@ -252,10 +252,10 @@ mvn javafx:run
 - [ ] Flask API running on port 5000
 - [ ] Health check returns `{"status":"healthy"}`
 
-### ‚úÖ Java Application
+###  Java Application
 
 - [ ] Application starts without errors
-- [ ] Console shows `‚úì ML prediction service connected`
+- [ ] Console shows `ì ML prediction service connected`
 - [ ] Scaling service shows `Mode: PROACTIVE (ML-based)`
 - [ ] Predictions logged every 15 seconds
 - [ ] Proactive scaling events occur
@@ -376,7 +376,7 @@ If this fails, Flask API is not running properly.
 
    ```
    [ML-Predictor] Current: 450 req/hr | Predicted (30min): 820 req/hr
-   [ML-Scaling] ‚ö° PROACTIVE SCALE UP
+   [ML-Scaling] ° PROACTIVE SCALE UP
    ```
 
 5. **Check statistics** in Admin Panel to see:
@@ -419,11 +419,11 @@ For production use, consider:
 
 ## Next Steps
 
-- ‚úÖ ML service running
-- ‚úÖ Java integration working
-- ‚è≠Ô∏è **Create visualization dashboard** (PredictionDashboard.java)
-- ‚è≠Ô∏è **Test proactive scaling** with simulated traffic
-- ‚è≠Ô∏è **Compare ML vs reactive scaling** performance
+-  ML service running
+-  Java integration working
+-  **Create visualization dashboard** (PredictionDashboard.java)
+-  **Test proactive scaling** with simulated traffic
+-  **Compare ML vs reactive scaling** performance
 
 ---
 
