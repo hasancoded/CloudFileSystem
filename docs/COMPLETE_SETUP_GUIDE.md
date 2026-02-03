@@ -312,7 +312,7 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
 **Using NetBeans:**
 
 1. **Open NetBeans**
-2. **File Üí Open Project**
+2. **File  Open Project**
 3. Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 4. Click "Open Project"
 
@@ -321,7 +321,7 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
    For each NEW file:
 
    - Right-click on appropriate package
-   - New Üí Java Class
+   - New  Java Class
    - Enter class name (without .java)
    - Copy-paste code from provided artifacts
 
@@ -346,11 +346,11 @@ mkdir src\test\java\com\soft40051\app\loadbalancer
 
 6. **Add Test Files:**
 
-   **†Ô∏è CRITICAL: Test files MUST go in `src/test/java`**
+   **Ô∏è CRITICAL: Test files MUST go in `src/test/java`**
 
    - Right-click "Test Packages"
-   - New Üí Java Package Üí `com.soft40051.app.auth`
-   - Right-click new package Üí New Üí Java Class Üí `AuthServiceTest`
+   - New  Java Package  `com.soft40051.app.auth`
+   - Right-click new package  New  Java Class  `AuthServiceTest`
    - Copy-paste test code
 
    Repeat for:
@@ -383,7 +383,7 @@ Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 
 1. **Jenkinsfile** (no extension)
 
-   - Right-click Üí New Üí Text Document
+   - Right-click  New  Text Document
    - Rename to "Jenkinsfile" (remove .txt)
    - Open with Notepad
    - Copy-paste Jenkinsfile content
@@ -403,7 +403,7 @@ Navigate to: `D:\NetBeansProjects\CloudFileSystem`
 
 **In NetBeans:**
 
-1. Right-click project Üí "Clean and Build"
+1. Right-click project  "Clean and Build"
 
 **OR in Command Prompt:**
 
@@ -651,7 +651,7 @@ mvn test
 
 ---
 
-## û SUPPORT & NEXT STEPS
+##  SUPPORT & NEXT STEPS
 
 ### If Build Still Fails:
 
