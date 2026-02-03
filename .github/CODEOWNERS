@@ -1,0 +1,17 @@
+# This file serves as a code of conduct for who owns which parts of the codebase.
+# These owners will be automatically requested for review when changes are made.
+
+# Global owners
+*       @hasancoded
+
+# Backend
+/backend/   @hasancoded
+
+# Frontend
+/frontend/  @hasancoded
+
+# ML Service
+/ml-service/ @hasancoded
+
+# Documentation
+/docs/      @hasancoded
