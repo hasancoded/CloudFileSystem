@@ -35,16 +35,13 @@ import type { DashboardMetrics, ActivityItem } from "../types";
 export default function DashboardPage() {
   const [metrics, setMetrics] = useState<DashboardMetrics | null>(null);
   const [loading, setLoading] = useState(true);
-  const [_error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
         const data = await metricsApi.getDashboard();
         setMetrics(data);
-        setError(null);
-      } catch (err) {
-        setError("Failed to load metrics");
+      } catch {
         // Use mock data for demo
         setMetrics(getMockMetrics());
       } finally {

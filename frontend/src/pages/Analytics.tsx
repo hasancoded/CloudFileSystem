@@ -8,17 +8,14 @@ import type { MLPrediction } from "../types";
 
 export default function AnalyticsPage() {
   const [mlData, setMlData] = useState<MLPrediction | null>(null);
-  const [_loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await metricsApi.getML();
         setMlData(data);
-      } catch (err) {
+      } catch {
         setMlData(getMockMLData());
-      } finally {
-        setLoading(false);
       }
     };
 

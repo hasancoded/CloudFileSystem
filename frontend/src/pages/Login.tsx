@@ -37,7 +37,7 @@ export default function LoginPage() {
           setError("Registration failed. Username may already exist.");
         }
       }
-    } catch (err) {
+    } catch {
       setError("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);

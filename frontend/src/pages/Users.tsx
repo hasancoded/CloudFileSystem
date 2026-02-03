@@ -30,7 +30,7 @@ export default function UsersPage() {
     try {
       const data = await usersApi.list();
       setUsers(data);
-    } catch (err) {
+    } catch {
       setUsers(getMockUsers());
     } finally {
       setLoading(false);
@@ -40,7 +40,7 @@ export default function UsersPage() {
   const handlePromote = async (id: number) => {
     try {
       await usersApi.promote(id);
-    } catch (err) {
+    } catch {
       // Demo mode
     }
     setUsers((prev) =>
@@ -51,7 +51,7 @@ export default function UsersPage() {
   const handleDemote = async (id: number) => {
     try {
       await usersApi.demote(id);
-    } catch (err) {
+    } catch {
       // Demo mode
     }
     setUsers((prev) =>
@@ -63,7 +63,7 @@ export default function UsersPage() {
     if (!confirm("Are you sure you want to delete this user?")) return;
     try {
       await usersApi.delete(id);
-    } catch (err) {
+    } catch {
       // Demo mode
     }
     setUsers((prev) => prev.filter((u) => u.id !== id));

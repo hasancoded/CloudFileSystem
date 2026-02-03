@@ -36,7 +36,7 @@ export default function FilesPage() {
     try {
       const data = await filesApi.list();
       setFiles(data);
-    } catch (err) {
+    } catch {
       // Use mock data
       setFiles(getMockFiles());
     } finally {
@@ -53,17 +53,7 @@ export default function FilesPage() {
     setIsDragging(false);
   }, []);
 
-  const handleDrop = useCallback(async (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    const droppedFiles = Array.from(e.dataTransfer.files);
-
-    if (droppedFiles.length > 0) {
-      await handleUpload(droppedFiles[0]);
-    }
-  }, []);
-
-  const handleUpload = async (file: File) => {
+  const handleUpload = useCallback(async (file: File) => {
     setUploading(true);
     setUploadProgress(0);
 
@@ -86,7 +76,7 @@ export default function FilesPage() {
         setUploadProgress(0);
         fetchFiles();
       }, 500);
-    } catch (err) {
+    } catch {
       // For demo, add to local state
       const newFile: FileItem = {
         id: Date.now(),
@@ -104,12 +94,25 @@ export default function FilesPage() {
         setUploadProgress(0);
       }, 500);
     }
-  };
+  }, []);
+
+  const handleDrop = useCallback(
+    async (e: React.DragEvent) => {
+      e.preventDefault();
+      setIsDragging(false);
+      const droppedFiles = Array.from(e.dataTransfer.files);
+
+      if (droppedFiles.length > 0) {
+        await handleUpload(droppedFiles[0]);
+      }
+    },
+    [handleUpload],
+  );
 
   const handleDelete = async (id: number) => {
     try {
       await filesApi.delete(id);
-    } catch (err) {
+    } catch {
       // Demo mode - just remove from local state
     }
     setFiles((prev) => prev.filter((f) => f.id !== id));
