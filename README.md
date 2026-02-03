@@ -1,7 +1,7 @@
 # CloudFileSystem
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
+![Build Status](https://github.com/hasancoded/cloud-file-system/actions/workflows/ci.yml/badge.svg)
 ![Java](https://img.shields.io/badge/Java-17-orange.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2-success.svg)
 ![React](https://img.shields.io/badge/React-18-blue.svg)
